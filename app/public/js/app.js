@@ -6,11 +6,25 @@ angular.module('nutritiousApp', [
   'ngRoute'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/login', {
-    templateUrl: 'login/login.html',
-    controller: 'LoginController',
+  $routeProvider.when('/', {
+    templateUrl: 'home/home.html',
+    controller: 'HomeController',
+    controllerAs: 'homeCtrl'
+  }).
+  when('/users/login', {
+    templateUrl: 'user/login/login.html',
+    controller: 'UserLoginController',
     controllerAs: 'loginCtrl'
-  });
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  }).
+  when('/users/register', {
+    templateUrl: 'user/register/register.html',
+    controller: 'UserRegisterController',
+    controllerAs: 'registerCtrl'
+  }).
+  when('/users/detail/:id', {
+    templateUrl: 'user/detail/detail.html',
+    controller: 'UserDetailController',
+    controllerAs: 'detailCtrl'
+  }).
+  otherwise({redirectTo: '/'});
 }]);

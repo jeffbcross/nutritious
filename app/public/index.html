@@ -4,16 +4,22 @@
   <meta charset="utf-8">
   <title>My AngularJS App</title>
   <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#/users/login">login</a></li>
+          <li><a href="#/users/register">register</a></li>
+          <li ng-if="userId"><a href="#/users/detail/{{userId}}">my nutrition</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
+    <div ng-view></div>
+  </div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
@@ -21,8 +27,12 @@
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
   <script src="js/app.js"></script>
-  <script src="login/login-controller.js"></script>
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="/dpd.js"></script>
+  <!-- app scripts -->
+  <script src="home/home-controller.js"></script>
+  <script src="user/login/login-controller.js"></script>
+  <script src="user/register/register-controller.js"></script>
+  <script src="user/detail/detail-controller.js"></script>
 </body>
 </html>

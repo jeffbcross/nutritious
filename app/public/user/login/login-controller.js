@@ -1,6 +1,5 @@
 angular.module('nutritiousApp').
-  controller('LoginController', ['$scope', '$location', function($scope, $location) {
-    console.log('next path', $location.search().path);
+  controller('UserLoginController', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
     this.login = function () {
       dpd.users.login({
         username: this.user.username,
@@ -8,6 +7,7 @@ angular.module('nutritiousApp').
       }, function (user, err) {
         if (!err && user) {
           $scope.$apply(function () {
+            $rootScope.userId = user.uid;
             $location.path($location.search().path);
           });
         }
