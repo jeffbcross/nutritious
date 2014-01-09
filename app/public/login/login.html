@@ -1,0 +1,6 @@
+<form name="loginForm" ng-submit="loginCtrl.login()">
+  <input type="text" ng-model="loginCtrl.user.username">
+  <input type="password" ng-model="loginCtrl.user.password">
+  <div ng-show="loginCtrl.valid == false" class="alert alert-error">Could not log in; please try again</div>
+  <input type="submit">Log in</button>
+</form>

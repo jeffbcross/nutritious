@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"quantity": {
+			"name": "quantity",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "quantity",
+			"order": 0
+		},
+		"time": {
+			"name": "time",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "time",
+			"order": 1
+		},
+		"user": {
+			"name": "user",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "user",
+			"order": 2
+		},
+		"food": {
+			"name": "food",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "food",
+			"order": 3
+		}
+	}
+}

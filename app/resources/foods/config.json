@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "name",
+			"order": 0
+		},
+		"nutrition": {
+			"name": "nutrition",
+			"type": "object",
+			"typeLabel": "object",
+			"required": false,
+			"id": "nutrition",
+			"order": 1
+		},
+		"unit": {
+			"name": "unit",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "unit",
+			"order": 2
+		},
+		"unitPlural": {
+			"name": "unitPlural",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "unitPlural",
+			"order": 3
+		}
+	}
+}
