@@ -1,4 +1,4 @@
 angular.module('nutritiousApp').
-  controller('DashboardController', function() {
+  controller('HomeController', function() {
 
   });
