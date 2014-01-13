@@ -1,1 +1,12 @@
-Detail!
+<div class="row">
+  <div class="col-md-8">
+    <h1>My Activity</h1>
+    <dpd-collection collection-path="'/activities'"
+                    collection-query="{user: userId}"
+                    collection-properties="collProps">
+    </dpd-collection>
+  </div>
+  <div class="col-md-4">
+    <dpd-user-component></dpd-user-component>
+  </div>
+</div>

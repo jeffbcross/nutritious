@@ -1,6 +1,10 @@
-Dashboard!
 <div class="row">
-  <div class="col-md-8"></div>
+  <div class="col-md-8">
+    <h1>Public Activity</h1>
+    <dpd-collection collection-path="'/activities'"
+                    collection-properties="collProps">
+    </dpd-collection>
+  </div>
   <div class="col-md-4">
     <dpd-user-component></dpd-user-component>
   </div>
