@@ -15,21 +15,26 @@ angular.module('nutritiousApp').
       // transclude: true,
       // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
       controllerAs: 'newCtrl',
-      controller: ['$scope', '$http', 'dpdUserStore', function ($scope, $http, dpdUserStore) {
-        this.save = function () {
-          $http({
-            url: '/activities',
-            method: 'POST',
-            data: {
-              user: dpdUserStore.username,
-              quantity: $scope.activityForm.quantity,
-              food: $scope.activityForm.food
-            }
-          }).success(function (activity) {
-            $scope.activityForm.$setPristine();
-          });
-        };
-      }],
+      controller: ['$scope', '$http', 'dpdUserStore', 'dpdCollectionStore',
+        function ($scope, $http, dpdUserStore, dpdCollectionStore) {
+          this.save = function () {
+            $http({
+              url: '/activities',
+              method: 'POST',
+              data: {
+                user: dpdUserStore.username,
+                quantity: $scope.activityForm.quantity,
+                food: $scope.activityForm.food
+              }
+            }).success(function (activity) {
+              $scope.activityForm.$setPristine();
+
+              dpdCollectionStore.collectionCache['activities'].splice(0,0,activity);
+
+
+            });
+          };
+        }],
       link: function () {
         console.log('linked');
       }

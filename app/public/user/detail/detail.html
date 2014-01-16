@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col-md-8">
     <h1>My Activity</h1>
-    <nut-new-activity></nut-new-activity>
+    <nut-new-activity ng-if="username == me.username"></nut-new-activity>
     <dpd-collection collection-path="'/activities'"
-                    collection-query="{user: username}"
+                    collection-query="{user: username, $sort: {time: -1}}"
                     collection-properties="collProps">
     </dpd-collection>
   </div>

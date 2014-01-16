@@ -1,7 +1,8 @@
 <form name="activityForm"
-      class="form-inline"
+      class="form-inline well"
       role="form"
       ng-submit="newCtrl.save()">
+  <h3>Add Activity</h3>
   <div class="form-group">
     <label>
       food
@@ -26,7 +27,7 @@
   </div>
   <button ng-disabled="!activityForm.$valid"
           type="submit"
-          margin-top="24px"
+          style="margin-top:24px;"
           class="btn btn-default">
     Save
   </button>
