@@ -23,7 +23,7 @@
           </li>
           <li data-match-route="/users/detail.*"
               ng-if="navbarCtrl.user.username">
-            <a href="#/users/detail/{{navbarCtrl.user.id}}">
+            <a href="#/users/detail/{{navbarCtrl.user.username}}">
               my nutrition
             </a>
           </li>
@@ -38,17 +38,22 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   -->
 
-
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+
+  <script src="app.js"></script>
+  <script src="/dpd.js"></script>
+  <!-- Angular Components -->
   <script src="bower_components/ng-dpd-user-component/user-component.js"></script>
   <script src="bower_components/ng-dpd-collection-component/collection-component.js"></script>
   <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
-  <script src="/dpd.js"></script>
+  <script src="bower_components/jc-nutritional-info/nutritional-info-component.js"></script>
+  <script src="components/nut-new-activity.js"></script>
+
   <!-- app scripts -->
-  <script src="app.js"></script>
+
   <script src="home/home-controller.js"></script>
   <script src="user/detail/detail-controller.js"></script>
   <script src="navbar-controller.js"></script>

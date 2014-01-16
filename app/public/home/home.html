@@ -2,7 +2,8 @@
   <div class="col-md-8">
     <h1>Public Activity</h1>
     <dpd-collection collection-path="'/activities'"
-                    collection-properties="collProps">
+                    collection-properties="collProps"
+                    collection-query="{'$limit': 25, $sort: {time: -1}}">
     </dpd-collection>
   </div>
   <div class="col-md-4">

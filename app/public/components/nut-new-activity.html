@@ -1,0 +1,33 @@
+<form name="activityForm"
+      class="form-inline"
+      role="form"
+      ng-submit="newCtrl.save()">
+  <div class="form-group">
+    <label>
+      food
+      <strong ng-if="foodsMap[activityForm.food]">
+        ({{foodsMap[activityForm.food]}})
+      </strong>
+    </label>
+    <input type="text"
+           class="form-control"
+           ng-model="activityForm.food"
+           ng-options="food.id as food.name for food in foods"
+           placeholder="Enter food"
+           required
+           bs-typeahead>
+  </div>
+  <div class="form-group">
+    <label>quantity</label>
+    <input type="number"
+           ng-model="activityForm.quantity"
+           required
+           class="form-control input-small">
+  </div>
+  <button ng-disabled="!activityForm.$valid"
+          type="submit"
+          margin-top="24px"
+          class="btn btn-default">
+    Save
+  </button>
+</form>

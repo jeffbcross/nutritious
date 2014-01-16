@@ -13,7 +13,7 @@
 			"name": "time",
 			"type": "number",
 			"typeLabel": "number",
-			"required": true,
+			"required": false,
 			"id": "time",
 			"order": 1
 		},

@@ -5,7 +5,8 @@ angular.module('nutritiousApp', [
   'dpdUser',
   'dpdCollection',
   'ngRoute',
-  'mgcrea.ngStrap'
+  'mgcrea.ngStrap',
+  'jcNutritionalInfo'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {

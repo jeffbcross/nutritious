@@ -16,22 +16,6 @@
 			"required": false,
 			"id": "nutrition",
 			"order": 1
-		},
-		"unit": {
-			"name": "unit",
-			"type": "string",
-			"typeLabel": "string",
-			"required": false,
-			"id": "unit",
-			"order": 2
-		},
-		"unitPlural": {
-			"name": "unitPlural",
-			"type": "string",
-			"typeLabel": "string",
-			"required": false,
-			"id": "unitPlural",
-			"order": 3
 		}
 	}
 }
