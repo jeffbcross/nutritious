@@ -1,0 +1,48 @@
+<html>
+  <script src="/dpd.js"></script>
+  <script>
+    [
+      'Twinkie',
+      'Roasted Cashews',
+      'Chicken Parmesan',
+      'Chocolate Covered Espresso Beans',
+      'Raisin Bran with Milk',
+      'Grilled Cheese Sandwich on Whole Wheat',
+      'Vanilla Gelato',
+      'Carrot',
+      'Spicy Chicken Sandwich',
+      'Cheese and Crackers',
+      'Pineapple Slices',
+      'Caesar Salad with Croutons',
+      'Baked Zucchini',
+      'Stir Fried Green Beans',
+      'Macaroni and Cheese',
+      'Broccoli Cheddar Soup',
+      'Peanut Butter and Jelly Sandwich',
+      'Doritos',
+      'Milky Way',
+      'Can of Boddington\'s'
+    ].forEach(function (food) {
+      dpd.foods.post({
+        name: food,
+        nutrition: {
+
+            "cholesterol": Math.round(Math.random() * 10) + "mg",
+            "sodium": Math.round(Math.random() * 10) + "mg",
+            "carbohydrate": Math.round(Math.random() * 10) + 10 + "mg",
+            "dietaryFiber": Math.round(Math.random() * 10) + "mg",
+            "sugars": Math.round(Math.random() * 10) + "mg",
+            "protein": Math.round(Math.random() * 10) + "mg",
+
+            "calories": Math.round(Math.random() * 10) + "mg",
+            "fat": Math.round(Math.random() * 10) + 10 + "mg",
+            "saturatedFat": Math.round(Math.random() * 10) + "mg",
+            "polyunsaturatedFat": Math.round(Math.random() * 10) + "mg",
+            "monounsaturatedFat": Math.round(Math.random() * 10) + "mg",
+            "potassium": Math.round(Math.random() * 10) + "mg",
+
+        }
+      })
+    });
+  </script>
+</html>

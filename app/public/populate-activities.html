@@ -1,0 +1,17 @@
+<html>
+  <script src="/dpd.js"></script>
+  <script>
+    dpd.foods.get(function (foods) {
+      foods.forEach(function (food) {
+        //For 20 users
+        for (var j = 0; j < 20; j++) {
+
+
+          dpd.activities.post({user: 'username' + j, quantity: Math.round(Math.random() * 10), food: food.id, time: Date.now() + Math.round(Math.random() * 1000000)});
+        }
+      });
+
+    });
+
+  </script>
+</html>
