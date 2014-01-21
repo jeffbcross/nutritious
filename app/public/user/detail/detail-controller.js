@@ -14,12 +14,14 @@ angular.module('nutritiousApp').
         readable: 'quantity'
       },{
         key: 'food',
-        readable: 'food'
+        readable: 'food',
+        path: 'name'
       }];
 
       $scope.foodsMap = {};
 
       $scope.foods = [];
+
       $http.get('/foods').success(function (foods){
         var nutritions = [];
         $scope.foods = foods;

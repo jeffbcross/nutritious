@@ -1,15 +1,22 @@
 <div class="row">
   <div class="col-md-8">
-    <h1>My Activity</h1>
+    <h1 ng-if="username == me.username">
+       My Activity
+    </h1>
+    <h1 ng-if="username != me.username">
+       {{username}}'s Activity
+    </h1>
     <nut-new-activity ng-if="username == me.username"></nut-new-activity>
     <dpd-collection collection-path="'/activities'"
                     collection-query="{user: username, $sort: {time: -1}}"
                     collection-properties="collProps">
     </dpd-collection>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 pull-right">
+    <div  class="well">
+      <dpd-user></dpd-user>
+    </div>
     <jc-nutritional-info nutrition-data="nutritionalInfo">
     </jc-nutritional-info>
-    <dpd-user-component></dpd-user-component>
   </div>
 </div>
