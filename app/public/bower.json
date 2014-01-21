@@ -17,8 +17,9 @@
   ],
   "dependencies": {
     "angular-resource": "~1.2.8",
-    "ng-dpd-user-component": "~0.0.2",
+    "ng-dpd-user-component": "~0.0.6",
     "angular-strap": "~2.0.0",
-    "ng-dpd-collection-component": "~0.0.3"
+    "ng-dpd-collection-component": "~0.0.5",
+    "jc-nutritional-info" : "~0.0.3"
   }
 }
