@@ -27,6 +27,7 @@ angular.module('nutritiousApp').
                 food: $scope.activityForm.food
               }
             }).success(function (activity) {
+              activity.food = $scope.foodsMap[$scope.activityForm.food];
               $scope.activityForm.$setPristine();
 
               dpdCollectionStore.collectionCache['activities'].splice(0,0,activity);
