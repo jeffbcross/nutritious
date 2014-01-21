@@ -13,6 +13,7 @@ angular.module('nutritiousApp').
       readable: 'quantity'
     },{
       key: 'food',
-      readable: 'food'
+      readable: 'food',
+      path: 'name'
     }];
   }]);
